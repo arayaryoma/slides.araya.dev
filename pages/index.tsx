@@ -17,7 +17,10 @@ const Home: FC<Props> = (props) => {
     <div>
       <ul>
         {props.slides.map((slide, i) => (
-          <li key={i}>{slide.title}</li>
+          <li key={i}>
+            <span>{slide.title}</span>
+            <img src={slide.image} alt="" />
+          </li>
         ))}
       </ul>
     </div>
