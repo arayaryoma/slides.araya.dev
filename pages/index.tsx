@@ -2,11 +2,7 @@ import { GetStaticProps } from "next";
 import { fetchDecks } from "@arayaryoma/speakerdeck-scraper";
 
 import React, { FC } from "react";
-
-interface Slide {
-  title?: string;
-  image?: string;
-}
+import { Card } from "../components/card";
 
 interface Props {
   slides: Array<Slide>;
@@ -18,8 +14,7 @@ const Home: FC<Props> = (props) => {
       <ul>
         {props.slides.map((slide, i) => (
           <li key={i}>
-            <span>{slide.title}</span>
-            <img src={slide.image} alt="" />
+            <Card slide={slide} />
           </li>
         ))}
       </ul>
@@ -35,6 +30,7 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
       slides: decks.map((deck) => ({
         title: deck.title,
         image: deck.previewImageSrc,
+        url: deck.url,
       })),
     },
   };
