@@ -1,0 +1,8 @@
+.slides {
+  list-style: none;
+  display: flex;
+  flex: row wrap;
+}
+.slide {
+  width: 30%;
+}

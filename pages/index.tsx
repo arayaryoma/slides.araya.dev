@@ -1,8 +1,8 @@
 import { GetStaticProps } from "next";
 import { fetchDecks } from "@arayaryoma/speakerdeck-scraper";
-
 import React, { FC } from "react";
 import { Card } from "../components/card";
+import classes from "./index.module.css";
 
 interface Props {
   slides: Array<Slide>;
@@ -11,9 +11,9 @@ interface Props {
 const Home: FC<Props> = (props) => {
   return (
     <div>
-      <ul>
+      <ul className={classes.slides}>
         {props.slides.map((slide, i) => (
-          <li key={i}>
+          <li key={i} className={classes.slide}>
             <Card slide={slide} />
           </li>
         ))}
