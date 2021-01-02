@@ -10,16 +10,18 @@ interface Props {
 
 const Home: FC<Props> = (props) => {
   return (
-    <section>
-      <h1>Slides</h1>
-      <ul className={classes.slides}>
-        {props.slides.map((slide, i) => (
-          <li key={i} className={classes.slide}>
-            <Card slide={slide} />
-          </li>
-        ))}
-      </ul>
-    </section>
+    <main className={classes.main}>
+      <section>
+        <h1>Slides</h1>
+        <ul className={classes.slides}>
+          {props.slides.map((slide, i) => (
+            <li key={i} className={classes.slide}>
+              <Card slide={slide} />
+            </li>
+          ))}
+        </ul>
+      </section>
+    </main>
   );
 };
 

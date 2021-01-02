@@ -12,3 +12,21 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
 }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::before {
+  box-sizing: border-box;
+}
+
+*::after {
+  box-sizing: border-box;
+}
