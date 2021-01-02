@@ -10,8 +10,8 @@ export const Card: FC<Props> = ({ slide }) => {
   return (
     <div>
       <a href={slide.url} className={classes.card}>
-        <img src={slide.image} loading="lazy" />
-        <span>{slide.title}</span>
+        <img src={slide.image} loading="lazy" className={classes.image} />
+        <span className={classes.title}>{slide.title}</span>
       </a>
     </div>
   );

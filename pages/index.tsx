@@ -10,7 +10,8 @@ interface Props {
 
 const Home: FC<Props> = (props) => {
   return (
-    <div>
+    <section>
+      <h1>Slides</h1>
       <ul className={classes.slides}>
         {props.slides.map((slide, i) => (
           <li key={i} className={classes.slide}>
@@ -18,7 +19,7 @@ const Home: FC<Props> = (props) => {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 

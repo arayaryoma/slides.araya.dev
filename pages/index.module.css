@@ -1,14 +1,14 @@
 .slides {
+  --card-width: calc(100% / 3);
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
+  display: grid;
+  grid-template-columns: 800px;
+  grid-template-rows: 33.333% 33.333% 33.333%;
+  column-gap: 24px;
+  row-gap: 24px;
 }
 .slide {
-  width: calc(33.3333% - 32px);
-  margin-inline-start: 16px;
-}
-
-.slide:nth-child(3n) {
-  margin-inline-start: 0;
+  grid-row-start: 0;
+  grid-row-end: 1;
+  place-self: center;
 }

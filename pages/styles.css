@@ -8,3 +8,7 @@
   --gray-2: #fcfcfc;
   --gray-3: #efefef;
 }
+html {
+  font-family: -apple-system, BlinkMacSystemFont, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
