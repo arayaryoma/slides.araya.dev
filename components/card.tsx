@@ -3,15 +3,17 @@ import { FC } from "react";
 import classes from "./card.module.css";
 
 type Props = {
-  slide: Slide;
+  title: string | null;
+  url: string | null;
+  image: string | null;
 };
 
-export const Card: FC<Props> = ({ slide }) => {
+export const Card: FC<Props> = ({ title, url, image }) => {
   return (
     <div>
-      <a href={slide.url} className={classes.card}>
-        <img src={slide.image} loading="lazy" className={classes.image} />
-        <span className={classes.title}>{slide.title}</span>
+      <a href={url} className={classes.card}>
+        <img src={image} loading="lazy" className={classes.image} />
+        <span className={classes.title}>{title}</span>
       </a>
     </div>
   );
