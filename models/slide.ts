@@ -12,7 +12,7 @@ export interface Slide {
 export const getAllSlides = async (): Promise<Array<Slide>> => {
   const decks = await fetchDecks({ username: "arayaryoma" });
   const slides = await fetchFromUrl();
-  console.log(slides);
+  console.log("[DEBUG] Found slides:", slides);
   return [
     ...decks.map((deck) => ({
       title: deck.title,
