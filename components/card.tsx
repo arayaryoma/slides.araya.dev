@@ -12,7 +12,7 @@ export const Card: FC<Props> = ({ title, url, image }) => {
   return (
     <div>
       <a href={url} className={classes.card}>
-        <img src={image} loading="lazy" className={classes.image} />
+        <img src={image} loading="lazy" className={classes.image} width={640} />
         <span className={classes.title}>{title}</span>
       </a>
     </div>
