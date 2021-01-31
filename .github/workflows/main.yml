@@ -12,6 +12,6 @@ jobs:
           node-version: '14'
       - run: yarn install --frozen
       - run: yarn run build
-      - run: yarn run deploy -t $VERCEL_TOKEN
+      - run: yarn run deploy -c -t $VERCEL_TOKEN
         env: 
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
